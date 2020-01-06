@@ -52,7 +52,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                     let gender: String = dictionary["gender"] as? String
                         {
                     
-                        InfoLabel.text = "Name: \(name)\n Status: \(status)\n Species: \(species)\n Origin: origin\n Gender: \(gender)\n Location: location"
+                        InfoLabel.text = "Name: \(name)\n Status: \(status)\n Species: \(species)\n  Gender: \(gender)"
                     }
                     
                 } else { print("dictionary failed") }
