@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CrossroadsFinderr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TD-3g-xHI">
+                                <rect key="frame" x="0.0" y="78" width="414" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="bBD-Bd-K1h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lO4-rk-yxa">
+                                <rect key="frame" x="207" y="812" width="207" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="X6x-fH-S6F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Zoom In"/>
+                                <connections>
+                                    <action selector="zoomIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T0c-bl-PbE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWM-EA-ESk">
+                                <rect key="frame" x="0.0" y="812" width="207" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zjU-Cw-YIi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Zoom Out"/>
+                                <connections>
+                                    <action selector="zoomOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DfS-W2-AjJ"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YtG-by-yXs">
+                                <rect key="frame" x="0.0" y="104" width="414" height="708"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8T-aI-FiJ">
+                                <rect key="frame" x="0.0" y="44" width="154" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJX-Ks-haj">
+                                <rect key="frame" x="248" y="44" width="166" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YtG-by-yXs" secondAttribute="trailing" id="0or-OS-wHW"/>
+                            <constraint firstItem="8TD-3g-xHI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EqG-H5-RWN"/>
+                            <constraint firstItem="xWM-EA-ESk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FEk-bd-HAw"/>
+                            <constraint firstItem="lO4-rk-yxa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="HGu-1J-qeD"/>
+                            <constraint firstItem="YtG-by-yXs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IDb-m4-Vpa"/>
+                            <constraint firstItem="8TD-3g-xHI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RAi-Dx-kYk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8TD-3g-xHI" secondAttribute="trailing" id="TKl-FH-IJC"/>
+                            <constraint firstItem="YtG-by-yXs" firstAttribute="top" secondItem="8TD-3g-xHI" secondAttribute="bottom" id="Tl6-fD-Iea"/>
+                            <constraint firstItem="lO4-rk-yxa" firstAttribute="leading" secondItem="xWM-EA-ESk" secondAttribute="trailing" id="W58-Bx-Ryp"/>
+                            <constraint firstItem="xWM-EA-ESk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Wlp-Jg-q44"/>
+                            <constraint firstItem="lO4-rk-yxa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aiS-tk-UUB"/>
+                            <constraint firstItem="xWM-EA-ESk" firstAttribute="top" secondItem="YtG-by-yXs" secondAttribute="bottom" id="ksc-1f-NVe"/>
+                            <constraint firstItem="lO4-rk-yxa" firstAttribute="top" secondItem="YtG-by-yXs" secondAttribute="bottom" id="vg1-0B-vMO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="crossroadsLabel" destination="8TD-3g-xHI" id="VWO-29-6r0"/>
+                        <outlet property="homeLabel" destination="M8T-aI-FiJ" id="UvC-lv-5hz"/>
+                        <outlet property="mapView" destination="YtG-by-yXs" id="rzG-Mg-iqY"/>
+                        <outlet property="taikoLabel" destination="fJX-Ks-haj" id="dzc-Mc-QK6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+</document>
